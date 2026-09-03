@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Access Converter</title>
+<link rel="stylesheet" href="/assets/app.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+<div id="app" hidden>
+  <header class="topbar">
+    <div class="brand">
+      <span class="title" id="brandtitle">Access Converter</span>
+      <span class="subtitle" id="subtitle"></span>
+    </div>
+    <div class="gauges" id="gauges"></div>
+    <span class="spacer"></span>
+    <div class="navgroup">
+    <nav class="viewtabs" id="viewtabs">
+      <button data-view="dashboard" aria-selected="true"></button>
+      <button data-view="object" aria-selected="false"></button>
+      <button data-view="map" aria-selected="false"></button>
+    </nav>
+    <button class="chip" id="another"></button>
+    <label class="langpick"><span class="visually-hidden" id="langlabel"></span>
+      <select id="langpick"></select></label>
+    </div>
+  </header>
+  <main class="body">
+    <aside class="sidebar">
+      <div class="searchbox"><input id="search" type="search"></div>
+      <div class="filters" id="filters"></div>
+      <div class="objectlist" id="objectlist"></div>
+    </aside>
+    <section class="content" id="content"></section>
+  </main>
+</div>
+
+<section id="landing" class="landing"></section>
+
+<script src="/assets/i18n.js"></script>
+<script src="/assets/app.js"></script>
+<script src="/assets/upload.js"></script>
+</body>
+</html>

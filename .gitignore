@@ -1,0 +1,25 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+coverage.xml
+pytest.xml
+
+# Development-only multi-agent environment. It is never part of the product.
+ai_development/
+
+# Local Access inputs and the sample corpus must not be published.
+access_inputs/
+samples/
+*.accdb
+*.accdt
+*.accde
+*.mdb
+*.mde
+
+# Locally generated conversion output.
+result.json
+result.html
+output/
+build/

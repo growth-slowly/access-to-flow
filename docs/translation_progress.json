@@ -1,0 +1,990 @@
+{
+  "artifacts": [
+    {
+      "artifact": "AI.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 7,
+      "relationships": 0,
+      "sample": "access_ai",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Access_Example_VBA.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 106,
+      "relationships": 0,
+      "sample": "access_examples",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Online Shop.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 65,
+      "relationships": 0,
+      "sample": "access_online_shop",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "AccessTemplate.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 46,
+      "relationships": 0,
+      "sample": "access_template_multiuser",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "DbPropsAddin.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 16,
+      "relationships": 0,
+      "sample": "database_property_editor",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "POS.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 156,
+      "relationships": 0,
+      "sample": "free_pos_access2013",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Antonevich_kursova_hotel_BD.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 94,
+      "relationships": 0,
+      "sample": "hotel_admin_ua",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "project Library system.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 16,
+      "relationships": 0,
+      "sample": "library_management",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "ASampleDatabase.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 13,
+      "relationships": 0,
+      "sample": "mdbtools_testdata",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "DateTestDatabase.mdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "jet4",
+      "objects_discovered": 1,
+      "relationships": 0,
+      "sample": "mdbtools_testdata",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "nwind.mdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "jet3",
+      "objects_discovered": 52,
+      "relationships": 0,
+      "sample": "mdbtools_testdata",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "tf22238896_win32.accdt",
+      "aspects": {
+        "application_logic": {
+          "complete": 46,
+          "completion_percentage": 48.94,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 93,
+          "partial": 48,
+          "scored_objects": 94
+        },
+        "data_logic": {
+          "complete": 141,
+          "completion_percentage": 83.93,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 19,
+          "partial": 27,
+          "scored_objects": 168
+        },
+        "structure": {
+          "complete": 186,
+          "completion_percentage": 99.47,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 1,
+          "scored_objects": 187
+        }
+      },
+      "blocking_reason_codes": {
+        "ACCESS_RUNTIME_FUNCTION": 7,
+        "FIELD_TYPE_HAS_NO_PORTABLE_EQUIVALENT": 2,
+        "MACRO_ACTION_SYSTEM_NOT_TRANSLATABLE": 1,
+        "MACRO_ACTION_UI_NOT_TRANSLATABLE": 1,
+        "OBJECT_METHOD_CALL": 1,
+        "ROW_SOURCE_TYPE_NOT_A_QUERY": 2,
+        "STORED_SQL_NOT_RE_PARSED": 1,
+        "USER_DEFINED_VBA_FUNCTION": 31,
+        "VBA_ACCESS_APPLICATION_OBJECT": 9,
+        "VBA_ACCESS_FORM_REFERENCE": 12,
+        "VBA_ACCESS_REPORT_REFERENCE": 2,
+        "VBA_DRIVES_ACCESS_UI": 22,
+        "VBA_FILE_SYSTEM_ACCESS": 6,
+        "VBA_HOST_ENVIRONMENT": 3,
+        "VBA_INTERACTIVE_DIALOG": 33
+      },
+      "definitions_extracted": 187,
+      "format_family": "accdt",
+      "objects_discovered": 187,
+      "relationships": 27,
+      "sample": "northwind2_dev_edition",
+      "semantically_complete": 122,
+      "semantically_partial": 65,
+      "status": "partial"
+    },
+    {
+      "artifact": "tf11138777_win32.accdt",
+      "aspects": {
+        "application_logic": {
+          "complete": 26,
+          "completion_percentage": 53.06,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 39,
+          "partial": 23,
+          "scored_objects": 49
+        },
+        "data_logic": {
+          "complete": 68,
+          "completion_percentage": 89.47,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 12,
+          "partial": 8,
+          "scored_objects": 76
+        },
+        "structure": {
+          "complete": 87,
+          "completion_percentage": 98.86,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 1,
+          "scored_objects": 88
+        }
+      },
+      "blocking_reason_codes": {
+        "ACCESS_RUNTIME_FUNCTION": 6,
+        "EXPRESSION_PARSE_FAILED": 1,
+        "FIELD_TYPE_HAS_NO_PORTABLE_EQUIVALENT": 1,
+        "MACRO_ACTION_SYSTEM_NOT_TRANSLATABLE": 2,
+        "MACRO_ACTION_UI_NOT_TRANSLATABLE": 4,
+        "MACRO_ELEMENT_NOT_RECOGNISED": 1,
+        "ROW_SOURCE_TYPE_NOT_A_QUERY": 1,
+        "UNKNOWN_FUNCTION": 3,
+        "VBA_ACCESS_APPLICATION_OBJECT": 5,
+        "VBA_ACCESS_FORM_REFERENCE": 5,
+        "VBA_ACCESS_REPORT_REFERENCE": 1,
+        "VBA_DRIVES_ACCESS_UI": 11,
+        "VBA_FILE_SYSTEM_ACCESS": 4,
+        "VBA_HOST_ENVIRONMENT": 4,
+        "VBA_INTERACTIVE_DIALOG": 10
+      },
+      "definitions_extracted": 88,
+      "format_family": "accdt",
+      "objects_discovered": 88,
+      "relationships": 5,
+      "sample": "northwind2_starter_edition",
+      "semantically_complete": 46,
+      "semantically_partial": 42,
+      "status": "partial"
+    },
+    {
+      "artifact": "Demo-Pri 4-7 Athletics.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 31,
+      "relationships": 0,
+      "sample": "sports_admin",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Demo-Pri 4-7 Swimming.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 31,
+      "relationships": 0,
+      "sample": "sports_admin",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Demo-Sec Athletics.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 30,
+      "relationships": 0,
+      "sample": "sports_admin",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Sports.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 520,
+      "relationships": 0,
+      "sample": "sports_admin",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "POS.mdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "jet4",
+      "objects_discovered": 11,
+      "relationships": 0,
+      "sample": "tailwind_pos",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Upgraded__POS.mdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "jet4",
+      "objects_discovered": 11,
+      "relationships": 0,
+      "sample": "tailwind_pos",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "TaxRegistration.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 34,
+      "relationships": 0,
+      "sample": "tax_registration",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    },
+    {
+      "artifact": "Example.accdb",
+      "aspects": {
+        "application_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "screen behaviour, VBA and macros, which need an application layer",
+          "failed": 0,
+          "label": "application logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "data_logic": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether it can be expressed as data processing in the target",
+          "failed": 0,
+          "label": "data logic",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        },
+        "structure": {
+          "complete": 0,
+          "completion_percentage": 0.0,
+          "description": "whether the definition itself was recovered and modelled",
+          "failed": 0,
+          "label": "structure",
+          "not_applicable": 0,
+          "partial": 0,
+          "scored_objects": 0
+        }
+      },
+      "blocking_reason_codes": {},
+      "definitions_extracted": 0,
+      "format_family": "ace",
+      "objects_discovered": 7,
+      "relationships": 0,
+      "sample": "vba_libraries",
+      "semantically_complete": 0,
+      "semantically_partial": 0,
+      "status": "partial"
+    }
+  ],
+  "blocking_reason_codes": {
+    "ACCESS_RUNTIME_FUNCTION": 13,
+    "EXPRESSION_PARSE_FAILED": 1,
+    "FIELD_TYPE_HAS_NO_PORTABLE_EQUIVALENT": 3,
+    "MACRO_ACTION_SYSTEM_NOT_TRANSLATABLE": 3,
+    "MACRO_ACTION_UI_NOT_TRANSLATABLE": 5,
+    "MACRO_ELEMENT_NOT_RECOGNISED": 1,
+    "OBJECT_METHOD_CALL": 1,
+    "ROW_SOURCE_TYPE_NOT_A_QUERY": 3,
+    "STORED_SQL_NOT_RE_PARSED": 1,
+    "UNKNOWN_FUNCTION": 3,
+    "USER_DEFINED_VBA_FUNCTION": 31,
+    "VBA_ACCESS_APPLICATION_OBJECT": 14,
+    "VBA_ACCESS_FORM_REFERENCE": 17,
+    "VBA_ACCESS_REPORT_REFERENCE": 3,
+    "VBA_DRIVES_ACCESS_UI": 33,
+    "VBA_FILE_SYSTEM_ACCESS": 10,
+    "VBA_HOST_ENVIRONMENT": 7,
+    "VBA_INTERACTIVE_DIALOG": 43
+  },
+  "corpus": {
+    "artifacts": 21,
+    "definitions_extracted": 275,
+    "extraction_percentage": 18.07,
+    "objects_discovered": 1522,
+    "semantic_percentage": 11.04,
+    "semantically_complete": 168,
+    "semantically_partial": 107
+  },
+  "schema": "access-translation-progress/2"
+}

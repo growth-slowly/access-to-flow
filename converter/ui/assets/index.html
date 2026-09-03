@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>__CSS__</style>
+<script>__I18N__</script>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="title">__TITLE__</span>
+      <span class="subtitle" id="subtitle"></span>
+    </div>
+    <div class="gauges" id="gauges"></div>
+    <span class="spacer"></span>
+    <div class="navgroup">
+    <nav class="viewtabs" id="viewtabs">
+      <button data-view="dashboard" aria-selected="true"></button>
+      <button data-view="object" aria-selected="false"></button>
+      <button data-view="map" aria-selected="false"></button>
+    </nav>
+    <label class="langpick"><span class="visually-hidden" id="langlabel"></span>
+      <select id="langpick"></select></label>
+    </div>
+  </header>
+  <main class="body">
+    <aside class="sidebar">
+      <div class="searchbox">
+        <input id="search" type="search">
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="objectlist" id="objectlist"></div>
+    </aside>
+    <section class="content" id="content"></section>
+  </main>
+</div>
+<script id="ir-data" type="application/json">__DATA__</script>
+<script>window.__ACCESS_IR__ = JSON.parse(document.getElementById("ir-data").textContent);</script>
+<script>__JS__</script>
+</body>
+</html>
