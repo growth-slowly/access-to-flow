@@ -4,6 +4,7 @@
 
 ---
 
+![access2flow viewer demo — flowchart, per-object browsing, and unsupported-section detection](./docs/access2flow_demo.gif)
 ## What it does
 
 ### Core capabilities
