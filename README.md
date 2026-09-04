@@ -1,4 +1,4 @@
-# access-to-flow
+# access2flow
 
 **access-to-flow** reads Microsoft Access applications completely offline,
 translates them into an intermediate representation (IR) that can be carried
