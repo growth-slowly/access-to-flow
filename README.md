@@ -1,159 +1,166 @@
 # access2flow
 
-**access-to-flow** reads Microsoft Access applications completely offline,
-translates them into an intermediate representation (IR) that can be carried
-forward to a target database, and clearly distinguishes what can and cannot be
-translated.
-
-It never launches Access, COM, or PowerShell, and it never executes SQL, VBA,
-or macros. It also makes no network connections. This is a deliberate design
-choice because Access files often contain sensitive information.
+**Unlock Microsoft Access systems for modern code migration** — an open-source tool that analyzes Access databases completely offline and visualizes the application logic so you can understand and modernize legacy systems with confidence.
 
 ---
 
 ## What it does
 
-| Input | Scope read | Output |
+### Core capabilities
+
+- **Complete offline analysis** — Analyze Access files (`.accdt`, `.accdb`, `.mdb`) without ever launching Access, COM, or executing VBA/SQL. Your data never leaves your machine.
+- **Visualize as flowcharts** — Complex procedures, macros, and data workflows become clear control-flow diagrams with color-coded branches, loops, and error handling.
+- **See what can't translate** — Unsupported syntax is explicitly flagged with reason codes and context, so you know exactly what needs manual work.
+- **Review by object** — Inspect each table, query, form, and procedure individually. See generated DDL/SQL, layouts, event mappings, and original definitions side by side.
+- **Three-language UI** — Switch between **English / 日本語 / 中文** at any time with no re-analysis needed.
+
+### Input/Output
+
+| Input | What we read | What you get |
 |---|---|---|
-| `.accdt` | All object definitions in the package | Semantic translations: table DDL, query SQL, screen and event structure, macro/data-macro steps, and VBA control flow |
-| `.accdb` (ACE 12/14/16/17) | `MSysObjects` only | Object inventory (name and type). **This is not a full translation.** |
-| `.mdb` (Jet 4.0 / Jet 3.x) | `MSysObjects` only | Object inventory (name and type). **This is not a full translation.** |
+| `.accdt` | All object definitions in the package | Semantic translations: table DDL, query SQL, screen structure, macro/VBA control flow, and event mappings |
+| `.accdb` (ACE 12/14/16/17) | `MSysObjects` only | Object inventory (name and type) |
+| `.mdb` (Jet 4.0 / Jet 3.x) | `MSysObjects` only | Object inventory (name and type) |
 
-All 21 collected sample files can be read by a direct reader. Full definitions
-are currently extracted for 275 `.accdt` objects. See
-[docs/TRANSLATION_PROGRESS.md](docs/TRANSLATION_PROGRESS.md) for the detailed
-breakdown.
+We currently extract full definitions for 275 `.accdt` objects. See [docs/TRANSLATION_PROGRESS.md](docs/TRANSLATION_PROGRESS.md) for details.
 
-## Two ways to run it
+---
 
-|  | Offline (CLI) | Browser (hosted) |
-|---|---|---|
-| Where the file stays | never leaves the machine | uploaded to the server |
-| Formats | `.accdt`, `.accdb`, `.mdb` | `.accdt` only |
-| Confidential data | no constraint | needs a decision — see below |
-| Distribution | anywhere Python runs | open a URL |
+## How the analysis works
 
-Use the offline CLI for a database that must not leave the building. The
-hosted version analyses an upload **in the server's memory only** — it is never
-written to disk, and neither the file name nor any of its contents reaches a
-log — but sending the file over a network is still more exposure than not
-sending it, and that fact does not go away because the handling is careful.
-
-## Usage (offline)
-
-```powershell
-# Translate an Access template and write JSON plus an offline HTML viewer.
-python -m converter translate "input.accdt" --output result.json --html result.html
-
-# Regenerate only the HTML viewer from existing JSON.
-python -m converter ui result.json --output result.html
-
-# Verify the sample corpus and update the progress snapshot.
-python tools/verify_corpus.py --json docs/translation_progress.json
+```mermaid
+flowchart LR
+    A["Access file<br/>(.accdt / .accdb / .mdb)"] --> B["Binary / OOXML reader<br/>(no Access, no COM)"]
+    B --> C["Catalog extraction<br/>tables, queries, forms,<br/>reports, macros, VBA"]
+    C --> D["Semantic translation<br/>expressions → SQL/DDL,<br/>events → control flow"]
+    D --> E["Intermediate<br/>Representation (IR)"]
+    E --> F["Coverage scoring<br/>structure / data / app logic"]
+    E --> G["Flow model<br/>flowcharts + relationship graph"]
+    F --> H["Output<br/>JSON + self-contained HTML viewer"]
+    G --> H
 ```
 
-The generated HTML is a self-contained single file. It uses no CDN, web font,
-or external image, so it can be opened by double-clicking it on an offline
-machine.
+Every step runs locally with the standard library only: nothing is executed, nothing is uploaded, and nothing is written outside the files you choose.
 
-For detailed instructions, see
-[docs/OFFLINE_CONVERTER_USAGE.md](docs/OFFLINE_CONVERTER_USAGE.md).
+---
 
-## Usage (browser)
+## Who should use this
 
-```powershell
+- **Enterprises with sensitive data** — Analyze confidential Access systems without sending files over the network; run locally or on your own infrastructure.
+- **Mid-market companies on a DX journey** — Plan migrations from Access to modern databases, understand system scope, and build handover documentation for developers.
+- **Teams wanting a faster path forward** — Get a head start on rewriting Access logic; see which parts translate to SQL, which need app code, and which require design decisions.
+
+---
+
+## Try it now
+
+### Browser version (easiest)
+
+```bash
 python -m converter.web --host 127.0.0.1 --port 8080
 ```
 
-Open http://127.0.0.1:8080/ and drop a `.accdt` file onto the page. The
-language selector in the top right switches between **日本語 / English / 中文**.
+Open http://127.0.0.1:8080/, drag a `.accdt` file onto the page, and explore:
 
-Publishing it is one container with no dependencies to install:
+![access2flow viewer demo — flowchart, per-object browsing, and unsupported-section detection](./docs/access2flow_demo.gif)
+
+**What you're seeing above** (actual product UI, English locale):
+1. **Object navigation** — every table, form, query, macro, and module listed and grouped by type in the sidebar; click any one to inspect it
+2. **Flowchart view** — VBA and macro control flow rendered as a diagram, color-coded by decision / data / UI action / error handling
+3. **Blockers view** — anything that could not be translated, with a reason code, the affected element, and a plain-language explanation of why
+
+### Host it yourself (for your team)
 
 ```bash
 gcloud run deploy access-to-flow --source . --region asia-northeast1 \
   --memory 1Gi --concurrency 4 --max-instances 3
 ```
 
-Cloud Run scales to zero, so a low-traffic deployment stays inside the free
-tier. Deployment steps, cost estimates, and a hardening checklist to work
-through before handling real customer data are in
-[docs/WEB_DEPLOYMENT.md](docs/WEB_DEPLOYMENT.md).
+Runs on Cloud Run's free tier for typical usage. See [docs/WEB_DEPLOYMENT.md](docs/WEB_DEPLOYMENT.md) for cost estimates, security hardening, and access controls.
+
+### Offline CLI (for air-gapped systems)
+
+```bash
+# Translate and generate an offline HTML viewer
+python -m converter translate input.accdt --output result.json --html result.html
+
+# Regenerate the viewer from JSON
+python -m converter ui result.json --output result.html
+```
+
+Full instructions in [docs/OFFLINE_CONVERTER_USAGE.md](docs/OFFLINE_CONVERTER_USAGE.md).
+
+---
+
+## How translation status works
+
+Unlike a single pass/fail, we assess every object from **three perspectives**:
+
+| Perspective | What it tells you |
+|---|---|
+| **Structure** | Can we read and parse the definition? |
+| **Data processing** | Can it become SQL or a data model? |
+| **Application processing** | Does it need app code, UI operations, or VBA? |
+
+Each unsupported section gets a reason code and perspective assignment, so your team knows who handles the work: database engineers, application developers, or architects.
+
+---
 
 ## Viewer features
 
-- **Overall summary** — Translation status by structural, data-processing,
-  and application-processing concern; counts by object type; and reason codes
-  with concrete examples for unsupported parts.
-- **Objects** — A per-object overview, generated SQL/DDL, a layout summary,
-  event-to-action mappings, unsupported sections, and original definition text.
-- **Flowcharts** — Visual control-flow diagrams for VBA procedures, macros,
-  and data macros. Branches, loops, error handling, and UI operations are
-  color-coded; diagrams support zooming and panning.
-- **System relationship graph** — Links such as form to query to table, and
-  button to procedure to screen.
-- **Three languages** — Japanese, English and Chinese, switchable at any time
-  and remembered. The intermediate representation carries no prose in any one
-  language: flow-chart wording travels as keys and reasons travel as codes, so
-  a new language is a new catalogue and nothing else. Reason codes themselves
-  stay in English in every locale, because they are identifiers shared by the
-  JSON, the documentation and bug reports.
+- **Overall summary** — Translation coverage by concern, object counts, and unsupported reason codes with examples
+- **Per-object details** — DDL, SQL, layout diagrams, event mappings, and original source
+- **Control-flow diagrams** — Flowcharts for VBA, macros, and data macros (branches, loops, error handling, color-coded by type)
+- **Relationship graph** — See how forms, queries, tables, procedures, and buttons connect
+- **Three languages** — Japanese, English, Chinese; switchable anytime with no re-analysis
 
-## How translation status is reported
-
-One pass/fail value is not useful. A form layout and data binding may translate
-completely, while a button calling `DoCmd.OpenForm` still requires application
-logic in the target system. Those concerns may also be handled by different
-people.
-
-Each object is therefore assessed from three perspectives.
-
-| Perspective | Question |
-|---|---|
-| Structure | Can the definition itself be read and modelled? |
-| Data processing | Can it be represented as target-side data logic, such as SQL? |
-| Application processing | Does it require another layer, such as UI operations, VBA, or macros? |
-
-Every untranslated section has a reason code and an assigned perspective.
-Unclassified reason codes are reported as `unclassified` and cause the
-corpus-wide tests to fail. New syntax cannot silently inflate coverage.
-
-See [docs/SEMANTIC_TRANSLATION.md](docs/SEMANTIC_TRANSLATION.md) for the full
-mapping of supported syntax and known non-translations.
+---
 
 ## Project layout
 
 ```
 converter/
-├─ __main__.py        Command entry point (translate / ui)
-├─ access/
-│  ├─ translation.py  Entry point for ACCDT packages and binary inputs
-│  ├─ jet_catalog.py  Jet 3 (Access 97) catalog reader
-│  └─ ace_catalog.py  Jet 4 / ACE catalog reader
-├─ semantics/         Semantic translation: expressions, queries, tables, UI, macros, and VBA
-├─ ir/                Intermediate-representation vocabulary, coverage, and errors
-├─ flow/              Flow model for relationship graphs and process flows
-├─ ui/                The viewer: single-file HTML output and the ja/en/zh catalogues
-├─ web/               The hosted service: no web framework, no dependencies
-└─ utils/             Shared utilities, including identifier normalization
+├─ __main__.py        CLI entry point
+├─ access/            Binary format readers (Jet, ACE)
+├─ semantics/         Semantic translation engine
+├─ ir/                Intermediate representation and coverage tracking
+├─ flow/              Control-flow model and graph rendering
+├─ ui/                Single-file HTML viewer and localization
+├─ web/               Lightweight hosted service (no framework)
+└─ utils/             Normalization and utilities
 
-samples/open_access_systems/   Open Access systems used for validation
-docs/                          Progress and contract documentation
-tools/                         Corpus validation and test tools
+docs/                  Deployment, progress, and technical reference
+samples/               Open-source Access systems for validation
+tools/                 Corpus testing and verification
 ```
 
-## Tests
+---
 
-```powershell
+## Quick start
+
+### Requirements
+
+Python 3.10+. Standard library only — no dependencies to install.
+
+### Test it
+
+```bash
+# Run the full test suite
 python -m pytest tests
-python tools/run_unittests.py     # Standard library only; pytest is not required.
+
+# Or with standard library only
+python tools/run_unittests.py
 ```
 
-`tools/run_unittests.py` works in an environment with no third-party packages,
-matching the constraint imposed on the product itself.
+### Learn more
 
-## Requirements
+- [Offline usage and CLI options](docs/OFFLINE_CONVERTER_USAGE.md)
+- [Hosting, costs, and security](docs/WEB_DEPLOYMENT.md)
+- [Semantic translation reference](docs/SEMANTIC_TRANSLATION.md)
+- [Translation progress by object type](docs/TRANSLATION_PROGRESS.md)
 
-Python 3.10 or later. Standard library only; no installation is required. The
-hosted service is the same — no web framework — so the answer to "what code
-runs on the machine that touches our database" stays short enough to read.
+---
+
+## Why completely offline?
+
+Access files often contain sensitive data: customer information, financial records, proprietary logic. Running completely offline—no COM, no PowerShell, no network calls, no SQL or macro execution—means your data stays where you put it. When you need to share results, you control what leaves the machine: JSON, HTML, documentation, or nothing at all.
